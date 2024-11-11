@@ -1,0 +1,113 @@
+<game>
+    <scene id="start">
+        <description>Welcome to the castle adventure! You stand at the grand entrance of an ancient castle. What do you do?</description>
+        <choices>
+            <choice id="enter_castle" next="castle_hall">
+                <text>Enter the castle</text>
+            </choice>
+            <choice id="leave" next="end_leave">
+                <text>Leave the castle</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <scene id="castle_hall">
+        <description>You step into the grand hall. Dust motes dance in the air. There are doors to the left and right.</description>
+        <choices>
+            <choice id="left_door" next="left_room">
+                <text>Go through the left door</text>
+            </choice>
+            <choice id="right_door" next="right_room">
+                <text>Go through the right door</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <scene id="left_room">
+        <description>You enter a library filled with ancient tomes.</description>
+        <choices>
+            <choice id="read_book" next="book_scene">
+                <text>Read a book</text>
+            </choice>
+            <choice id="search" next="search_scene">
+                <text>Search the room</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <scene id="right_room">
+        <description>You find a dark storage room with mysterious crates.</description>
+        <choices>
+            <choice id="open_crate" next="crate_scene">
+                <text>Open a crate</text>
+            </choice>
+            <choice id="leave" next="castle_hall">
+                <text>Return to the hall</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <scene id="book_scene">
+        <description>You discover a spellbook that grants you magical powers!</description>
+        <choices>
+            <choice id="use_magic" next="end_magic">
+                <text>Use your newfound magic</text>
+            </choice>
+            <choice id="return" next="castle_hall">
+                <text>Return to the hall</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <scene id="search_scene">
+        <description>You find a hidden passage behind a shelf!</description>
+        <choices>
+            <choice id="explore_passage" next="hidden_passage">
+                <text>Explore the passage</text>
+            </choice>
+            <choice id="return" next="left_room">
+                <text>Return to the library</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <scene id="crate_scene">
+        <description>You find an enchanted item inside the crate!</description>
+        <choices>
+            <choice id="take_item" next="end_item">
+                <text>Take the enchanted item</text>
+            </choice>
+            <choice id="leave" next="right_room">
+                <text>Leave the item and return</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <scene id="hidden_passage">
+        <description>You uncover a treasure chamber filled with gold!</description>
+        <choices>
+            <choice id="take_gold" next="end_treasure">
+                <text>Take the gold</text>
+            </choice>
+            <choice id="leave" next="castle_hall">
+                <text>Leave the treasure</text>
+            </choice>
+        </choices>
+    </scene>
+
+    <end id="end_magic">
+        <description>You use your magic to become the ruler of the castle!</description>
+    </end>
+
+    <end id="end_item">
+        <description>You take the enchanted item and become a powerful wizard!</description>
+    </end>
+
+    <end id="end_treasure">
+        <description>You take the gold and become the richest person in the land!</description>
+    </end>
+
+    <end id="end_leave">
+        <description>You leave the castle behind, but the stories of its mysteries will haunt you forever...</description>
+    </end>
+</game>
